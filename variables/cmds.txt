@@ -1,0 +1,4 @@
+terraform apply -var-file=input.tfvars
+
+
+export TF_VAR_my_pet_name="parrot"

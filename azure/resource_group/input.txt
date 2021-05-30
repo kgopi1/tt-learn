@@ -1,0 +1,19 @@
+variable "resource_group_name" {
+    type = string
+    description = "(optional) describe your variable"
+}
+
+variable "location" {
+    type = string
+    description = "(optional) describe your variable"
+}
+
+variable "vnet_name" {
+    type = string
+    description = "(optional) describe your variable"
+}
+
+variable "vnet_address_space" {
+    type = list
+    description = "(optional) describe your variable"
+}
