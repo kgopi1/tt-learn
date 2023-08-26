@@ -1,0 +1,4 @@
+# exclude the .terraform 
+.terraform
+.terraform.lock.hcl
+*.tfstate
