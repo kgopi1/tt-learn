@@ -13,6 +13,11 @@ variable "students_marks" {
   }
 }
 
+# variable "students_marks" {
+#   default = {}
+
+# }
+
 # List of students names
 output "students" {
   value = keys(var.students_marks)
@@ -51,4 +56,11 @@ locals {
 
 output "get_students" {
   value = local.get_students
+}
+
+
+resource "local_file" "file2" {
+  for_each = var.students_marks
+  content  = each.key
+  filename = "${each.value.english}.txt"
 }
