@@ -29,7 +29,7 @@ locals {
   ])
   env_service_count = length(var.envs)+length(var.service)
   env_service_combine = concat(var.envs,var.service)
-  env_service_map = { for svc in local.env_service : index(local.env_service,svc) => svc }
+  env_service_map = { for svc in local.env_service : index(local.env_service, svc) => svc }
 }
 
 output "env_service" {
